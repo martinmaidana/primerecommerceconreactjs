@@ -1,0 +1,23 @@
+header{
+    background-color: blueviolet;
+}
+
+.imagenLogo{
+    height: 64px;
+    
+}
+
+.barraNavegacion{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.cantidad{
+    background: rgb(122, 7, 148);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}

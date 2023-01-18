@@ -1,0 +1,16 @@
+.carrito{
+    margin-top: 6px;
+    display: flex;
+    
+}
+
+.cantidad{
+    background: rgb(117, 7, 126);
+    color:azure;
+    border-radius: 50%;
+    width: 28px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
