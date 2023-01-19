@@ -1,17 +1,4 @@
-.tarjetas{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+.contenedor{
+    padding: 14px;
+    
 }
-
-.tarjetas-children{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-font-family: roboto;
-text-align: center;
-}
-
-

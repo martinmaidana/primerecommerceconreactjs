@@ -3,8 +3,8 @@
 ############################################*/
 
 //Modulos
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 //Estilos
 import "./ItemDetailContainer.css";
 import ItemDetail from "../itemDetail/ItemDetail.js";
@@ -16,19 +16,25 @@ import ItemDetail from "../itemDetail/ItemDetail.js";
 ############################################*/
 const ItemDetailContainer = () => {
   //funcion constructora
+  const [productos, setProductos] = useState([]);
 
-const {productoId} = {useParams}
-useEffect(()=>{
-
-  
-},)
-  return (
-    <div>
-      <p>ItemDetailContainer</p>
-      <section className="itemDetail-box">
-        <ItemDetail/>
-      </section>
-    </div>
-  );
+  const { productoId } = useParams();
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/${productoId}`)
+      .then((res) => res.json())
+      .then((productos) =>
+        setProductos(
+          <ItemDetail
+            key={productos.id}
+            id={"producto" + productos.id}
+            data={productos}
+          />
+        )
+      );
+  }, [productoId])
+  return <section className="itemDetail-box">
+    <Link to='/productos'>Volver a mis productos</Link>
+    {productos}
+    </section>;
 };
 export default ItemDetailContainer;

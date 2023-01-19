@@ -10,7 +10,7 @@ import "./Item.css";
 import ItemCount from "../itemCount/ItemCount.js";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import{Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 //Core
 
 /*############################################
@@ -18,26 +18,19 @@ import{Link} from 'react-router-dom'
 ############################################*/
 const Item = (props) => {
   //funcion constructora
-  const { nombre, descripcion, categoria, precio, stock, Año, imagen, id } =
-    props.data;
+  const { title, price, image, id } = props.data;
   return (
     <div>
-      <Card bg="dark" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
+      <Card bg="warning" style={{ width: "15rem" }}>
+        <Card.Img variant="top" src={image} />
         <Card.Body>
           <Card.Title>
-            {" "}
-            <p>{nombre}</p>
+            <p>{title}</p>
           </Card.Title>
-          <Card.Text>
-            {descripcion}
-            {categoria}
-          </Card.Text>
-          <Card.Text>{Año}</Card.Text>
-
-          <Card.Text>Precio: {precio}</Card.Text>
-          <Link to={`/producto/${id}`}>Ver Detalle del  Producto</Link>
-          <ItemCount stock={stock} />
+          <Card.Text>Precio: {price}</Card.Text>
+          <Link to={`/producto/${id}`}>Ver Detalle del Producto</Link>
+          {/* modificar el STOCK al crear una API interna */}
+          <ItemCount stock={10} />
         </Card.Body>
       </Card>
     </div>

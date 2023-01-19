@@ -1,62 +1,30 @@
-// #################
-// IMPORTACIONES
-// #################
+//        IMPORTACIONES
 
-//modulos
-import { useState } from "react";
+// Modulos
 
-//estilos
-import "./ItemListContainer.css";
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-//componentes
-import ItemList from "../itemList/ItemList";
+// Estilos
+import './ItemListContainer.css'
 
-// ################
-// LOGICA
-// ################
-const ItemListContainer = (props) => {
+// Componentes
+import ItemList from '../itemList/ItemList.js'
 
-  //funcion constructora
-  const [categoria, setCategoria] = useState("");
 
-  const categoriaCabernet = () => {
-    setCategoria("Cabernet");
-  };
+// Core
 
-  const categoriaMalbec = () => {
-    setCategoria("Malbec");
-  };
-  const categoriaTodo = () => {
-    setCategoria("Todo");
-  };
-  //array de objetos
-  //iterar un array de objetos
-  //mostrar todos los objetos
 
- 
+//        LOGICA
 
-  return (
-    <div className="itemList">
-      <p >
-        este es mi primer e-commerce con {props.greeting}
-      </p>
-      <h1>Subcribite para obtener descuentos y beneficios.</h1>
-      <ButtonGroup className="mb-2">
-        <Button variant="dark" onClick={categoriaMalbec}>Malbec</Button>
-        <Button variant="dark" onClick={categoriaCabernet}>Cabernet</Button>
-        <Button variant="dark" onClick={categoriaTodo}>Todos</Button>
-      </ButtonGroup>
+// Función constructora
+const ItemListContainer = () =>{
 
-      
+    return(
+        <div className='contenedor'>           
+                <h2>Productos</h2>           
+            <ItemList/>
+        </div>
+    )
+}
 
-      <ItemList  categoriaNombre={categoria}></ItemList>
-      
-    </div>
-  );
-};
 
-// ################
-// EXPORTACIONES
-// ################
-export default ItemListContainer;
+//        EXPORTACIÓN
+export default ItemListContainer

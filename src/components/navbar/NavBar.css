@@ -2,6 +2,11 @@ header{
     background-color: blueviolet;
 }
 
+.brand{
+    display: flex;
+    align-items: center;
+}
+
 .imagenLogo{
     height: 64px;
     
@@ -20,4 +25,8 @@ header{
     border-radius: 50%;
     width: 100px;
     height: 100px;
+}
+
+.texto{
+    text-decoration: none;
 }

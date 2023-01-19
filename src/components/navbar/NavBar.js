@@ -3,16 +3,15 @@
 // #################
 
 //modulos
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 //estilos
 import "./NavBar.css";
 import CardWidget from "../cardWidget/CardWidget.js";
-import logo from "./assets/logo.png"
+import verificar from "./assets/verificar.png";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
 
 // ################
 // LOGICA
@@ -21,14 +20,19 @@ const NavBar = function BasicExample() {
   //funcion constructora
   return (
     <Navbar bg="info" expand="md">
-      <img src={logo} className="imagenLogo" alt="logo"></img>
+      <Link className="brand" to="/">
+        <img src={verificar} className="imagenLogo" alt="logo"></img>
+        <h1>E-Shop</h1>
+     </Link>
 
       <Container>
         <Navbar.Brand href="#home"></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="justify-content-end" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="justify-content-end"
+        />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-      
             <Link to="/">HOME</Link>
             <Link to="/productos">PRODUCTOS</Link>
             {/* <Link to="/catas">CATAS</Link> */}
@@ -44,7 +48,7 @@ const NavBar = function BasicExample() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">Contacto</NavDropdown.Item>
             </NavDropdown> */}
-           
+
             <CardWidget cantidad="27" />
           </Nav>
         </Navbar.Collapse>

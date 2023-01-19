@@ -23,6 +23,7 @@ import AboutUs from "./components/aboutUs/AboutUs.js";
 import Footer from "./components/footer/Footer.js";
 
 
+
 //4.CORE . WEBVITALS
 import reportWebVitals from "./reportWebVitals";
 
@@ -36,10 +37,9 @@ root.render(
          <Route path='/' element={<Home/>}/>
          <Route exact path='/productos' element={<ItemListContainer greeting="productos"/>}/>
          <Route exact path='/producto/:productoId' element={<ItemDetailContainer/>}/>
-
-         {/* <Route exact path='/catas' element={<catas/>}/> */}
+         <Route exact path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
          <Route exact path='/nosotros' element={<AboutUs/>}/>
-         //uvas
+       
    
           
          

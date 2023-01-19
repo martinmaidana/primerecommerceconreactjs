@@ -40,7 +40,7 @@ const ItemCount = (props) => {
   return (
     <div className="box-count">
       <div className="box-count-children">
-        <p>{props.vino}</p>
+        {/* <p>{props.vino}</p> */}
         <Button variant="outline-success" onClick={disOne}>
           -
         </Button>{" "}
