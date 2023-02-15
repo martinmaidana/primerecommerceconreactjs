@@ -26,15 +26,19 @@ const ItemCount = (props) => {
   const [count, setCount] = useState(0);
   //Funciones de suma hasta el limite de sotck
   const addOne = () => {
-    if (count < props.stock) setCount(count + 1);
+    if (count < props.stock) {
+      setCount(count + 1);
+
+      props.guardarCantidadAComprar(count);
+    }
   };
   //funcion de resta hasta el minimo, 0
   const disOne = () => {
-    if (count > 0) setCount(count - 1);
-  };
-  //Funcion Agregar por cantidad de productos
-  const onAdd = () => {
-    console.log(count);
+    if (count > 0) {
+      setCount(count - 1);
+
+      props.guardarCantidadAComprar(count);
+    }
   };
 
   return (
@@ -49,9 +53,7 @@ const ItemCount = (props) => {
           +
         </Button>{" "}
       </div>
-      <Button onClick={onAdd} variant="success">
-        Agregar al carrito
-      </Button>
+    
     </div>
   );
 };

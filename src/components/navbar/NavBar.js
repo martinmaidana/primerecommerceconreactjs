@@ -23,7 +23,7 @@ const NavBar = function BasicExample() {
       <Link className="brand" to="/">
         <img src={verificar} className="imagenLogo" alt="logo"></img>
         <h1>E-Shop</h1>
-     </Link>
+      </Link>
 
       <Container>
         <Navbar.Brand href="#home"></Navbar.Brand>
@@ -49,7 +49,9 @@ const NavBar = function BasicExample() {
               <NavDropdown.Item href="#action/3.4">Contacto</NavDropdown.Item>
             </NavDropdown> */}
 
-            <CardWidget cantidad="27" />
+            <Link id="RouterNavLink" to="/carrito">
+              <CardWidget cantidad="27" />
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

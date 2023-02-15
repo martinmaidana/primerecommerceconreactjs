@@ -30,7 +30,7 @@ const Item = (props) => {
           <Card.Text>Precio: {price}</Card.Text>
           <Link to={`/producto/${id}`}>Ver Detalle del Producto</Link>
           {/* modificar el STOCK al crear una API interna */}
-          <ItemCount stock={10} />
+          {/* <ItemCount stock={10} /> */}
         </Card.Body>
       </Card>
     </div>
