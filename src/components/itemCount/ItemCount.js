@@ -29,7 +29,7 @@ const ItemCount = (props) => {
     if (count < props.stock) {
       setCount(count + 1);
 
-      props.guardarCantidadAComprar(count);
+    
     }
   };
   //funcion de resta hasta el minimo, 0
@@ -37,7 +37,7 @@ const ItemCount = (props) => {
     if (count > 0) {
       setCount(count - 1);
 
-      props.guardarCantidadAComprar(count);
+    
     }
   };
 
@@ -53,8 +53,10 @@ const ItemCount = (props) => {
           +
         </Button>{" "}
       </div>
-    
+      <Button onClick={()=>props.onAdd(count)} variant="success">
+        Agregar al carrito
+      </Button>
     </div>
   );
 };
-export default ItemCount;
+export default ItemCount;

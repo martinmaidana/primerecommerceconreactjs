@@ -11,40 +11,29 @@ import ItemCount from "../itemCount/ItemCount.js";
 import ItemListContainer from "../itemListContainer/ItemListContainer";
 import { useContext, useState } from "react";
 import {CartProvider, useCartContext} from "../../context/CartContext";
-import { GContext } from "../cart/Cart";
-
+import { GContext } from "../cart/CartContext";
 import {db} from "../../services/firebase";
-
-
 //componentes
 //Core
-
 /*############################################
 |||||||||||||||Logica
 ############################################*/
-const ItemDetail = (props) => {
-  console.log(props)
+const ItemDetail = (props) => {  
   //funcion constructora
-  // const {addItem} = useContext(GContext);
-// console.log(addItem);
-  const [cantidadDeProductosAComprar, setCantidadDeProductosAComprar] = useState(0)
-
-  const { title, description, category, price, image, id } = props.data;
-
+  const { title, description, category, price, image, id, stock } = props.data;
 const{ agregarAlCarrito} =useCartContext()
+const {addItem} = useContext(GContext)
+console.log(addItem)
 
-const funciondelhijoguardarcantidad = (cantidadx) =>{
-  setCantidadDeProductosAComprar(cantidadx)
-}
-
-const onAdd = ()=>{
-  if(cantidadDeProductosAComprar !== 0){
+const onAdd = (cantidad)=>{
+  if(cantidad !== 0){
+   
   const producto = {
     id:id,
     title:title,
     category:category,
     price:price,
-    count: cantidadDeProductosAComprar,
+    count: cantidad,
   }
   agregarAlCarrito(producto)
 }else {
@@ -65,10 +54,8 @@ return (
               <Card.Title>{title}</Card.Title>
               <Card.Text>{description}</Card.Text>
               <Card.Text>Precio: {price}</Card.Text>
-              <ItemCount stock={10} guardarCantidadAComprar={funciondelhijoguardarcantidad} />
-              <Button onClick={onAdd} variant="success">
-        Agregar al carrito
-      </Button>
+              <ItemCount stock={stock}  onAdd={onAdd}/>
+         
             </Card.Body>
           </div>
         </Card>
