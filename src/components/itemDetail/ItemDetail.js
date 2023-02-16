@@ -13,6 +13,9 @@ import { useContext, useState } from "react";
 import {CartProvider, useCartContext} from "../../context/CartContext";
 import { GContext } from "../cart/Cart";
 
+import {db} from "../../services/firebase";
+
+
 //componentes
 //Core
 
@@ -20,6 +23,7 @@ import { GContext } from "../cart/Cart";
 |||||||||||||||Logica
 ############################################*/
 const ItemDetail = (props) => {
+  console.log(props)
   //funcion constructora
   // const {addItem} = useContext(GContext);
 // console.log(addItem);
