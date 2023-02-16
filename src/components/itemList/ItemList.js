@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../../services/firebase";
+import { db } from "../../services/firebase.js";
 
 // Estilos
 import "./ItemList.css";
@@ -36,15 +36,11 @@ const ItemList = () => {
         }
         return newDoc
          });
-         console.log(docsInfo)
-         setProductos(docsInfo)
-  
-     
-    
        
+         setProductos(docsInfo)       
       };
       getData();
-    }, [categoriaId]);
+    },[categoriaId]);
   
 
   //   if (categoriaId != null) {
@@ -96,7 +92,7 @@ const ItemList = () => {
           </Link>
         </ButtonGroup>
       </div>
-      <div className="d-flex justify-content-around flex-wrap">{productos}</div>
+      <div className="d-flex justify-content-around flex-wrap">{productos.map((prod)=> <Item key={prod.id} data={prod}/>)}</div>
     </div>
   );
 };

@@ -9,8 +9,9 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import ItemCount from "../itemCount/ItemCount.js";
 import ItemListContainer from "../itemListContainer/ItemListContainer";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {CartProvider, useCartContext} from "../../context/CartContext";
+import { GContext } from "../cart/Cart";
 
 //componentes
 //Core
@@ -20,7 +21,8 @@ import {CartProvider, useCartContext} from "../../context/CartContext";
 ############################################*/
 const ItemDetail = (props) => {
   //funcion constructora
-
+  // const {addItem} = useContext(GContext);
+// console.log(addItem);
   const [cantidadDeProductosAComprar, setCantidadDeProductosAComprar] = useState(0)
 
   const { title, description, category, price, image, id } = props.data;
@@ -42,7 +44,7 @@ const onAdd = ()=>{
   }
   agregarAlCarrito(producto)
 }else {
-  alert("añadi tus productosh")
+  alert("No olvides añadir tus productos")
 }}
 
 return (

@@ -1,9 +1,8 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore/lite";
+import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  //AGREGAR SU CONFIGURACION DE FIREBASE
   apiKey: "AIzaSyD-DQmWNyrcczDlTxQBNxWsFvcJDkpx2xA",
   authDomain: "react-34880-daf8d.firebaseapp.com",
   projectId: "react-34880-daf8d",
