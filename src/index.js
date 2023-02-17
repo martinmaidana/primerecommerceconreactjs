@@ -22,7 +22,7 @@ import ItemListContainer from "./components/itemListContainer/ItemListContainer.
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer.js";
 import AboutUs from "./components/aboutUs/AboutUs.js";
 import Footer from "./components/footer/Footer.js";
-import Cart from "./components/cart/CartContext"
+import Cart from "./components/cartContext/CartContext"
 
 //4.CORE . WEBVITALS
 import reportWebVitals from "./reportWebVitals";

@@ -11,7 +11,7 @@ import ItemCount from "../itemCount/ItemCount.js";
 import ItemListContainer from "../itemListContainer/ItemListContainer";
 import { useContext, useState } from "react";
 import {CartProvider, useCartContext} from "../../context/CartContext";
-import { GContext } from "../cart/CartContext";
+import { GContext } from "../cartContext/CartContext";
 import {db} from "../../services/firebase";
 //componentes
 //Core

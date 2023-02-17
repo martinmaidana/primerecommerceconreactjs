@@ -3,14 +3,14 @@
 ############################################*/
 
 //Modulos
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 //Estilos
 import "./ItemDetailContainer.css";
 import ItemDetail from "../itemDetail/ItemDetail.js";
 import {doc, getDoc} from "firebase/firestore";
 import {db} from "../../services/firebase";
-import { GContext } from "../cart/CartContext";
+import { GContext } from "../cartContext/CartContext";
 //componentes
 //Core
 
