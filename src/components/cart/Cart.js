@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 
 import { Button } from "react-bootstrap";
+import { CartContainer } from "../cartContainer/CartContainer";
 
 
 
@@ -36,7 +37,7 @@ const cantidadTotal = getQuantity();
         <Button onClick={()=>clear(cart.id)}>vaciar carrito</Button>
         <h2>Tienes {cantidadTotal} productos en tu carrito.</h2>
         <h1> El total es: {tot} </h1>
-        <Button>Finalizar compra</Button>
+        <Button onClick={}>Finalizar compra</Button>
             </div>
         }
         </section>
