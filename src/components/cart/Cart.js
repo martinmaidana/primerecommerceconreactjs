@@ -37,7 +37,7 @@ const cantidadTotal = getQuantity();
         <Button onClick={()=>clear(cart.id)}>vaciar carrito</Button>
         <h2>Tienes {cantidadTotal} productos en tu carrito.</h2>
         <h1> El total es: {tot} </h1>
-        <Button onClick={}>Finalizar compra</Button>
+       <Button className="btn btn-warning"><Link to="/formulario">Finalizar compra</Link></Button> 
             </div>
         }
         </section>

@@ -18,6 +18,7 @@ import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailCont
 import AboutUs from "./components/aboutUs/AboutUs.js";
 import Footer from "./components/footer/Footer.js";
 import Cart from "./components/cart/Cart.js"
+import CartContainer from "./components/cartContainer/CartContainer";
 
 
 import reportWebVitals from "./reportWebVitals";
@@ -34,6 +35,11 @@ root.render(
             exact
             path="/carrito"
             element={<Cart/>}
+          />
+           <Route
+            exact
+            path="/formulario"
+            element={<CartContainer/>}
           />
           <Route
             exact

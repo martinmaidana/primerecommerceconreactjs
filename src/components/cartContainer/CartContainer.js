@@ -2,25 +2,18 @@ import React from "react";
 import "./CartContainer.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import { Cart } from "../cart/Cart";
+
+import Button from "react-bootstrap/Button";
 
 const CartContainer = () => {
   //funcion constructora
 
 
-  const { getTotal, cart} = useContext(CartContext)
+  const { getTotal, cart, getQuantity} = useContext(CartContext)
 const tot = getTotal();
-
+const cantidadTotal = getQuantity();
 const sendOrder =()=>{
-    const newOrder = {
-        buyer:{
-            name,
-            phone,
-            email
-        },
-        cart,
-        tot,
-    }
+   
 }
   return (
     <div>
@@ -51,14 +44,7 @@ const sendOrder =()=>{
             Confirme su Email:{" "}
             <input id="email" name="email" type="email" required />
           </label>
-          <form>
-            <input
-              pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-              required
-            />
-            <br />
-            <input type="submit" value="Submit Now!" />
-          </form>
+         
         </fieldset>
 
         <fieldset>
