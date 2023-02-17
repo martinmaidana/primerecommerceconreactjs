@@ -10,8 +10,9 @@ import { Button } from "react-bootstrap";
 
 
 const Cart = () => {
-    const {cart, clear, removeItem, getTotal} = useContext(CartContext)
+    const {cart, clear, removeItem, getTotal, getQuantity} = useContext(CartContext)
 const tot = getTotal();
+const cantidadTotal = getQuantity();
     return (
         <div>
         <section>
@@ -33,6 +34,7 @@ const tot = getTotal();
                     )
                     })}   
         <Button onClick={()=>clear(cart.id)}>vaciar carrito</Button>
+        <h2>Tienes {cantidadTotal} productos en tu carrito.</h2>
         <h1> El total es: {tot} </h1>
         <Button>Finalizar compra</Button>
             </div>
