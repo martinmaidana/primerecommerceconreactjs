@@ -55,7 +55,8 @@ const ItemCount = (props) => {
       </div>
       <Button onClick={()=>props.onAdd(count)} variant="success">
         Agregar al carrito
-      </Button>
+       
+      </Button> 
     </div>
   );
 };

@@ -33,9 +33,9 @@ const onAdd = (cantidad)=>{
     price:price,
     count: cantidad,
   }
-  // agregarAlCarrito(producto)
+   addItem(producto,cantidad)
 }else {
-  alert("No olvides añadir tus productos")
+  alert("No has añadido ningun producto a tu carrito")
 }}
 
 return (
