@@ -17,7 +17,7 @@ import ItemListContainer from "./components/itemListContainer/ItemListContainer.
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer.js";
 import AboutUs from "./components/aboutUs/AboutUs.js";
 import Footer from "./components/footer/Footer.js";
-
+import Cart from "./components/cart/Cart.js"
 
 
 import reportWebVitals from "./reportWebVitals";
@@ -30,6 +30,11 @@ root.render(
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route
+            exact
+            path="/carrito"
+            element={<Cart/>}
+          />
           <Route
             exact
             path="/productos"
