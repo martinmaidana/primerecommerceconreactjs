@@ -1,8 +1,3 @@
-//####################
-//IMPORTACIONES
-//##################
-
-//1.MODULOS
 import CartProvider from "./context/CartContext";
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -10,10 +5,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
-//2.ESTILOS
+
 import "./index.css";
 
-//3.COMPONENTES
+
 // import App from './App';
 
 import NavBar from "./components/navbar/NavBar.js";
@@ -22,9 +17,9 @@ import ItemListContainer from "./components/itemListContainer/ItemListContainer.
 import ItemDetailContainer from "./components/itemDetailContainer/ItemDetailContainer.js";
 import AboutUs from "./components/aboutUs/AboutUs.js";
 import Footer from "./components/footer/Footer.js";
-import Cart from "./components/cartContext/CartContext"
 
-//4.CORE . WEBVITALS
+
+
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -50,7 +45,6 @@ root.render(
             path="/categoria/:categoriaId"
             element={<ItemListContainer />}
           />
-          <Route exact path="/carrito" element={<Cart />}/>
           <Route exact path="/nosotros" element={<AboutUs />} />
         </Routes>
 

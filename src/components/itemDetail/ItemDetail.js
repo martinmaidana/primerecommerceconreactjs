@@ -10,8 +10,7 @@ import Button from "react-bootstrap/Button";
 import ItemCount from "../itemCount/ItemCount.js";
 import ItemListContainer from "../itemListContainer/ItemListContainer";
 import { useContext, useState } from "react";
-import {CartProvider, useCartContext} from "../../context/CartContext";
-import { GContext } from "../cartContext/CartContext";
+import { CartContext } from "../../context/CartContext";
 import {db} from "../../services/firebase";
 //componentes
 //Core
@@ -21,8 +20,7 @@ import {db} from "../../services/firebase";
 const ItemDetail = (props) => {  
   //funcion constructora
   const { title, description, category, price, image, id, stock } = props.data;
-const{ agregarAlCarrito} =useCartContext()
-const {addItem} = useContext(GContext)
+const {addItem} = useContext(CartContext)
 console.log(addItem)
 
 const onAdd = (cantidad)=>{
@@ -35,7 +33,7 @@ const onAdd = (cantidad)=>{
     price:price,
     count: cantidad,
   }
-  agregarAlCarrito(producto)
+  // agregarAlCarrito(producto)
 }else {
   alert("No olvides añadir tus productos")
 }}

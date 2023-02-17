@@ -10,7 +10,6 @@ import "./ItemDetailContainer.css";
 import ItemDetail from "../itemDetail/ItemDetail.js";
 import {doc, getDoc} from "firebase/firestore";
 import {db} from "../../services/firebase";
-import { GContext } from "../cartContext/CartContext";
 //componentes
 //Core
 
