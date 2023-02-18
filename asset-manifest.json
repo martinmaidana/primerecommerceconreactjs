@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/primerecommerceconreactjs/tree/firebase/static/css/main.072911fa.css",
-    "main.js": "/primerecommerceconreactjs/tree/firebase/static/js/main.99cc7580.js",
-    "static/js/787.47c70f36.chunk.js": "/primerecommerceconreactjs/tree/firebase/static/js/787.47c70f36.chunk.js",
-    "static/media/fa-solid-900.ttf": "/primerecommerceconreactjs/tree/firebase/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
-    "static/media/wine1.jpg": "/primerecommerceconreactjs/tree/firebase/static/media/wine1.474294d3c9f202fd43b9.jpg",
-    "static/media/fa-brands-400.ttf": "/primerecommerceconreactjs/tree/firebase/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
-    "static/media/fa-solid-900.woff2": "/primerecommerceconreactjs/tree/firebase/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
-    "static/media/fa-brands-400.woff2": "/primerecommerceconreactjs/tree/firebase/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
-    "static/media/wine3.jpg": "/primerecommerceconreactjs/tree/firebase/static/media/wine3.3483170fe9a4fdf2cf08.jpg",
-    "static/media/fa-regular-400.ttf": "/primerecommerceconreactjs/tree/firebase/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
-    "static/media/wine2.jpg": "/primerecommerceconreactjs/tree/firebase/static/media/wine2.30800538fa81ccda8fdb.jpg",
-    "static/media/verificar.png": "/primerecommerceconreactjs/tree/firebase/static/media/verificar.594062a69a7edab75080.png",
-    "static/media/fa-regular-400.woff2": "/primerecommerceconreactjs/tree/firebase/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
-    "static/media/fa-v4compatibility.ttf": "/primerecommerceconreactjs/tree/firebase/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
-    "static/media/fa-v4compatibility.woff2": "/primerecommerceconreactjs/tree/firebase/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
-    "index.html": "/primerecommerceconreactjs/tree/firebase/index.html",
-    "main.072911fa.css.map": "/primerecommerceconreactjs/tree/firebase/static/css/main.072911fa.css.map",
-    "main.99cc7580.js.map": "/primerecommerceconreactjs/tree/firebase/static/js/main.99cc7580.js.map",
-    "787.47c70f36.chunk.js.map": "/primerecommerceconreactjs/tree/firebase/static/js/787.47c70f36.chunk.js.map"
+    "main.css": "/primerecommerceconreactjs/static/css/main.e0dc492e.css",
+    "main.js": "/primerecommerceconreactjs/static/js/main.9cdca04a.js",
+    "static/js/787.47c70f36.chunk.js": "/primerecommerceconreactjs/static/js/787.47c70f36.chunk.js",
+    "static/media/fa-solid-900.ttf": "/primerecommerceconreactjs/static/media/fa-solid-900.b1a653db79258eeccc5d.ttf",
+    "static/media/wine1.jpg": "/primerecommerceconreactjs/static/media/wine1.474294d3c9f202fd43b9.jpg",
+    "static/media/fa-brands-400.ttf": "/primerecommerceconreactjs/static/media/fa-brands-400.450a5c898f0b184b968b.ttf",
+    "static/media/fa-solid-900.woff2": "/primerecommerceconreactjs/static/media/fa-solid-900.41c0f706d8ce93933771.woff2",
+    "static/media/fa-brands-400.woff2": "/primerecommerceconreactjs/static/media/fa-brands-400.3ac6859b28be946745f9.woff2",
+    "static/media/wine3.jpg": "/primerecommerceconreactjs/static/media/wine3.3483170fe9a4fdf2cf08.jpg",
+    "static/media/fa-regular-400.ttf": "/primerecommerceconreactjs/static/media/fa-regular-400.3cd9fb8fcec4ad0f99d4.ttf",
+    "static/media/wine2.jpg": "/primerecommerceconreactjs/static/media/wine2.30800538fa81ccda8fdb.jpg",
+    "static/media/verificar.png": "/primerecommerceconreactjs/static/media/verificar.594062a69a7edab75080.png",
+    "static/media/fa-regular-400.woff2": "/primerecommerceconreactjs/static/media/fa-regular-400.1f3772178d9e5bed38a6.woff2",
+    "static/media/fa-v4compatibility.ttf": "/primerecommerceconreactjs/static/media/fa-v4compatibility.e314b618134d5be20996.ttf",
+    "static/media/fa-v4compatibility.woff2": "/primerecommerceconreactjs/static/media/fa-v4compatibility.4ee7f902d88f819e251c.woff2",
+    "index.html": "/primerecommerceconreactjs/index.html",
+    "main.e0dc492e.css.map": "/primerecommerceconreactjs/static/css/main.e0dc492e.css.map",
+    "main.9cdca04a.js.map": "/primerecommerceconreactjs/static/js/main.9cdca04a.js.map",
+    "787.47c70f36.chunk.js.map": "/primerecommerceconreactjs/static/js/787.47c70f36.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.072911fa.css",
-    "static/js/main.99cc7580.js"
+    "static/css/main.e0dc492e.css",
+    "static/js/main.9cdca04a.js"
   ]
 }
