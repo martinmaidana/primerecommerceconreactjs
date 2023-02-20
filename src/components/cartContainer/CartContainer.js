@@ -2,7 +2,7 @@ import React from "react";
 import "./CartContainer.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-import {getFirestore, deleteDoc, collection, addDoc, setDoc, doc, getDoc, onSnapshot} from "firebase/firestore";
+import {getFirestore, deleteDoc, collection, addDoc, setDoc, doc, getDoc, getDocs,  onSnapshot} from "firebase/firestore";
 import {useEffect, useState } from "react";
 import { db } from "../../services/firebase"
 
@@ -30,21 +30,25 @@ const cantidadTotal = getQuantity();
     }
 
   }
-const [user, setUser]= useState(valorInicial)  
+const [user, setUser]= useState(valorInicial);
+  
 const capturarInputs = (e)=>{
     const {name,value}= e.target;
     setUser({...user, [name]:value})
+    console.log(user)
 }
 
 const guardarDatos = async(e)=>{
+  
+const queryRef = collection(db,"orders");
+const response = await addDoc(queryRef, user)
     e.preventDefault();
     console.log(user)
-    setUser({...valorInicial})
+    setUser({...user})
 }
    
 
-// const queryRef = collection(db,"orders");
-// const response = addDoc(queryRef, valorInicial);
+
 // console.log(response)
 // valorInicial(response.id)
   return (
@@ -58,24 +62,24 @@ const guardarDatos = async(e)=>{
         <fieldset>
           <label htmlFor="nombre">
             Ingrese su nombre:{" "}
-            <input id="nombre" name="nombre" type="text"  onChange={capturarInputs} value={user.nombre} required/>
+            <input id="nombre" name="nombre" type="text"  onChange={capturarInputs}  required/>
           </label>
           <label htmlFor="apellido">
             Ingrese su apellido:{" "}
-            <input id="apellido" name="apellido" type="text" onChange={capturarInputs} value={user.apellido} required />
+            <input id="apellido" name="apellido" type="text" onChange={capturarInputs}  required />
           </label>
           <input
             type="tel"
             name="telefono"
-            placeholder="(Código de área) Número" onChange={capturarInputs} value={user.telefono}
+            placeholder="(Código de área) Número" onChange={capturarInputs} 
           ></input>
           <label htmlFor="email">
             Ingrese su Email:{" "}
-            <input id="email" name="email" type="email" onChange={capturarInputs} value={user.email} required />
+            <input id="email" name="email" type="email" onChange={capturarInputs}  required />
           </label>
           <label htmlFor="email">
             Confirme su Email:{" "}
-            <input id="email" name="email" type="email" onChange={capturarInputs} value={user.email} required />
+            <input id="email" name="email" type="email" onChange={capturarInputs}  required />
           </label>
          
         </fieldset>
@@ -83,7 +87,7 @@ const guardarDatos = async(e)=>{
         <fieldset>
           <label htmlFor="referrer">
             Seleccion su medio de pago
-            <select id="referrer" name="referrer" onChange={capturarInputs} value={user.referrer}>
+            <select id="referrer" name="referrer" onChange={capturarInputs}>
               <option value="">(select uno)</option>
               <option value="Efectivo">Efectivo</option>
               <option value="Tarjeta de Credito">Tarjeta de Credito</option>
