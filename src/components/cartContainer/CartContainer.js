@@ -2,6 +2,7 @@ import React from "react";
 import "./CartContainer.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
+import {getAuth, singOut} from "firebase/auth"
 import {getFirestore, deleteDoc, collection, addDoc, setDoc, doc, getDoc, getDocs,  onSnapshot} from "firebase/firestore";
 import {useEffect, useState } from "react";
 import { db } from "../../services/firebase"
@@ -14,11 +15,14 @@ const CartContainer = () => {
 
 
 
-  const { getTotal, getQuantity} = useContext(CartContext);
+  const { getTotal, getQuantity, cart} = useContext(CartContext);
 //   const {orderId, setOrderId} = useState (undefined)
   
 const tot = getTotal();
 const cantidadTotal = getQuantity();
+const carrito = cart;
+
+
 
   const valorInicial ={
     buyer:{
@@ -31,7 +35,7 @@ const cantidadTotal = getQuantity();
 
   }
 const [user, setUser]= useState(valorInicial);
-  
+
 const capturarInputs = (e)=>{
     const {name,value}= e.target;
     setUser({...user, [name]:value})
@@ -39,14 +43,26 @@ const capturarInputs = (e)=>{
 }
 
 const guardarDatos = async(e)=>{
-  
-const queryRef = collection(db,"orders");
-const response = await addDoc(queryRef, user)
     e.preventDefault();
-    console.log(user)
-    setUser({...user})
-}
+    try{
+      await addDoc(collection(db,"orders"),{ ...user})
+    }catch{
+
+    }
+ 
+  const order = {
+    buyer: user,
+    total: tot,
+    quantity: cantidadTotal,
+    carrito:carrito
    
+
+  }
+  const response = await addDoc(order)
+
+  setUser(valorInicial)
+}
+
 
 
 // console.log(response)
