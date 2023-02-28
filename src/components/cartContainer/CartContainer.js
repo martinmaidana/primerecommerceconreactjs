@@ -43,25 +43,17 @@ const capturarInputs = (e)=>{
 }
 
 const guardarDatos = async(e)=>{
-    e.preventDefault();
-    try{
-      await addDoc(collection(db,"orders"),{ ...user})
-    }catch{
-
-    }
- 
+  const queryRef = collection(db, "orders");
   const order = {
     buyer: user,
     total: tot,
-    quantity: cantidadTotal,
-    carrito:carrito
-   
-
+    quantity: cantidadTotal
   }
-  const response = await addDoc(order)
-
+  const response = await addDoc(queryRef, order)
+  e.preventDefault();
   setUser(valorInicial)
 }
+
 
 
 
